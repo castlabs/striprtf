@@ -222,6 +222,7 @@ def rtf_to_text(text, encoding="cp1252", errors="strict"):
                 current_font = arg
                 if current_font not in fonttbl:
                     fonttbl[current_font] = {}
+                    fonttbl[current_font]['encoding'] = encoding
             elif word == "fonttbl":
                 fonttbl = {}
                 suppress_output = True
